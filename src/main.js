@@ -15,10 +15,8 @@ new App({
       "Some annoying technology preventing me to finish my ticket and breaking production",
     ],
     // Which CI/CD tools do you use in your project?
-    tools: ":sadpanda:",
+    tools: "Jenkins again, maybe Tekton in the far future",
     // What do you want to learn in this workshop?
-    expectations: ["Share knowledge about the basics of CI/CD"],
-    // What do you like to do when you're not coding?
-    hobbies: ["reading books", "cooking", "playing computer games"],
+    expectations: ["Share knowledge about the basics of CI/CD"]
   },
 });
