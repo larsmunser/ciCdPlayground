@@ -17,6 +17,6 @@ new App({
     // Which CI/CD tools do you use in your project?
     tools: "Jenkins again, maybe Tekton in the far future",
     // What do you want to learn in this workshop?
-    expectations: ["Share knowledge about the basics of CI/CD"]
+    expectations: ["Share knowledge about the basics of CI/CD"],
   },
 });
