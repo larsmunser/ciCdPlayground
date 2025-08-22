@@ -26,6 +26,8 @@ jobs:
       run: yarn
     - name: Unit tests
       run: yarn test
+    - name: JUnit Report Action
+      uses: mikepenz/action-junit-report@v5.6.2
     - name: Build
       run: yarn build
     - name: Integration tests
