@@ -1,8 +1,5 @@
 name: CI
 
-env:
-  APP_VERSION: 1.0.0
-
 on: 
   push:
   pull_request:
@@ -39,3 +36,15 @@ jobs:
       with:
         report_paths: "**/reports/**/*.xml"
         fail_on_failure: false
+
+  tagging:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Get version
+        id: version
+        run: echo "version=$(date +'%Y.%m.%d')" >> $GITHUB_OUTPUT
+      - name: Tag commit
+        run: |
+          git tag "v${{ steps.version.outputs.version }}"
+          git push origin "v${{ steps.version.outputs.version }}"
