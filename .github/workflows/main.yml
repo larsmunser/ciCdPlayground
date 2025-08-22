@@ -26,9 +26,12 @@ jobs:
       run: yarn
     - name: Unit tests
       run: yarn test
-    - name: JUnit Report Action
-      uses: mikepenz/action-junit-report@v5.6.2
     - name: Build
       run: yarn build
     - name: Integration tests
       run: yarn test:e2e
+    - name: JUnit Report Action
+      uses: mikepenz/action-junit-report@v5.6.2
+      if: always()  # Ensures it runs even if tests fail
+        with:
+          files: "**/reports/**/*.xml"
