@@ -43,5 +43,5 @@ jobs:
         fail_on_failure: false
     - name: Create tag
       run: |
-        git tag v${{ github.events.inputs.version }}
-        git push origin v${{ github.events.inputs.version }}
+        git tag ${{ github.events.inputs.version }}
+        git push origin ${{ github.events.inputs.version }}
