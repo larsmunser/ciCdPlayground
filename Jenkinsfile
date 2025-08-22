@@ -14,8 +14,8 @@ pipeline {
         stage('unit_tests') {
             steps {
                 sh 'yarn test'
-                junit stdioRetention: 'ALL', testResults: '**/reports/**/*.xml'
             }
+            junit stdioRetention: 'ALL', testResults: '**/reports/**/*.xml'
         }
 
         stage('build') {
@@ -28,6 +28,7 @@ pipeline {
             steps {
                 sh 'yarn test:e2e'
             }
+            junit stdioRetention: 'ALL', testResults: '**/reports/**/*.xml'
         }
 
         stage('deploy') {
