@@ -23,6 +23,9 @@ pipeline {
         }
 
         stage('build') {
+            options {
+                stageDescription('This is the Build stage.')
+            }
             steps {
                 sh 'yarn build'
             }
